@@ -9,7 +9,7 @@ export const useTodoList = () => {
 
 
     const handleNewTodo = (newTodo) => {
-        
+       
         const action = {
             type: 'add todo',
             payload: newTodo
@@ -32,9 +32,9 @@ export const useTodoList = () => {
     }
 
     const handleToggleTodo = (id) => {
-
+       
         const action = {
-
+            
             type: 'toggle todo',
             payload: id
 

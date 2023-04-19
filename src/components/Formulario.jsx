@@ -5,7 +5,7 @@ import { useForm } from "../hooks/useForm"
 
 
 
-export const Formulario = ({añadirTarea}) => {
+export const Formulario = ({handleNewTodo}) => {
     
   const { formulario, handleChange } = useForm("");
 
@@ -22,7 +22,7 @@ export const Formulario = ({añadirTarea}) => {
         date: new Date()
     }
       
-    añadirTarea(newTodo)
+    handleNewTodo(newTodo)
 
   };
 

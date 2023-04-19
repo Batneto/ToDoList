@@ -18,7 +18,7 @@ export const Container = () => {
     })
 
   
-
+    
   return (
     <>
 
@@ -30,7 +30,7 @@ export const Container = () => {
 
     <h3>Añadir Tarea</h3>
 
-    <Formulario  añadirTarea= {handleNewTodo} />
+    <Formulario  handleNewTodo= {handleNewTodo} />
     <h2>Tareas</h2>
 
     <table>
