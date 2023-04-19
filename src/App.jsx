@@ -1,14 +1,28 @@
 import { Container } from "./components/Container"
-import { Estado } from "./components/Estado"
+import { NavBar } from "./components/Navbar"
+import { Route, Routes, Navigate } from 'react-router-dom'
+import { Servicios } from "./components/Servicios"
+import { Login } from "./components/Login"
+
+
 
 
 function App() {
  
 
   return (
-    <div >
-      {/* <Estado/> */}
-      <Container/>
+    <div>
+      <NavBar/>
+     <Routes>
+
+     <Route path='/' element={<Container/>} />
+     <Route path='login' element={<Login/>} />
+     <Route path='servicios' element={<Servicios/>} />
+     
+
+      
+    </Routes>
+
     </div>
   )
 }

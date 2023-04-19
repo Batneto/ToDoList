@@ -26,29 +26,28 @@ export const Formulario = ({añadirTarea}) => {
 
   };
 
-  
-
   return (
     <>
-      
-
+      <section className="sec-form">
       <form onSubmit={onSubmit} className="center formulario">
-        <input className="inputText"
+
+        <input className="i-form"
           type="text"
           placeholder="titulo"
           name="titulo"
           onChange={handleChange}
         />
-         <input className="inputText"
+        
+         <textarea className="ta-form"
           type="textarea"
           placeholder="descripcion"
           name="description"
           onChange={handleChange}
         />
-        <input className="inputSub" type="submit" value="Buscar" />
-
-        
+        <input className="s-form" type="submit" value="Buscar" />
       </form>
+
+      </section>
     </>
   );
 };

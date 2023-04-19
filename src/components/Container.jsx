@@ -8,7 +8,7 @@ import{useTodoList} from '../hooks/useTodoList'
 export const Container = () => {
 
 
-    const {todos, handleNewTodo}= useTodoList() 
+    const {todos, handleNewTodo,handleDeleteTodo,handleToggleTodo}= useTodoList() 
 
 
     useEffect(()=>{
@@ -17,27 +17,32 @@ export const Container = () => {
 
     })
 
-    console.log(todos);
+  
 
   return (
     <>
 
-    <header>
-        <h1>Practica TODOList</h1>
+    <header className='ctr hdr wh'>
+        <h1 className='title'>Practica TODOList</h1>
     </header>
 
+    <div className="screen pad">
 
-    <h3>Añadir taera</h3>
+    <h3>Añadir Tarea</h3>
 
     <Formulario  añadirTarea= {handleNewTodo} />
-    
+    <h2>Tareas</h2>
+
+    <table>
    {todos.map((item)=>(
-     <ListaTareas key={item.id} {...item}  />
+      
+     <ListaTareas handleToggleTodo={handleToggleTodo} handleDeleteTodo={handleDeleteTodo} key={item.id} {...item}  />
    ))
    
 
    }
-    
+   </table>
+    </div>
 
     </>
   )

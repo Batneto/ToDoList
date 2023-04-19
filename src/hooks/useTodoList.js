@@ -18,6 +18,7 @@ export const useTodoList = () => {
     dispatch(action) 
     }
 
+
     const handleDeleteTodo = (id) => {
 
         const action = {
@@ -31,7 +32,15 @@ export const useTodoList = () => {
     }
 
     const handleToggleTodo = (id) => {
-       
+
+        const action = {
+
+            type: 'toggle todo',
+            payload: id
+
+        } 
+
+        dispatch(action)
     }
 
 
